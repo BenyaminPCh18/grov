@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body{
+  background-color: #eee;
+  color: #333;
+  font-family: 'Montserrat',sans-serif;
+}
+a{
+  text-decoration: none;
+  color: dodgerblue;
+}
+a:hover{
+  text-decoration: underline;
+  color: darkblue;
+}
+/*BARRA DE NAVEGACION*/
+#navbar{
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  z-index: 100;/*deducir funcion*/
+  overflow: hidden;/*deducir funcion*/
+}
+#navbar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+
+  /*z-index: 100; (permite posicionar elementos, uno encima de otro)*/
+}
+img{
+  width: 100%;
+}
+/*creando clase para nuestro NAVBAR*/
+.lista-sm{
+  display: block;
+}
+/*----------------*/
+#navbar li{
+  float: left;
+}
+#navbar li a{
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1em;
+  text-align: center;
+  color: aliceblue;
+}
+#navbar li.active a{
+  color:red;
+}
+
+#navbar li a:hover{
+  background-color: coral;
+  color:black;
+}
+/*MODIFICANDO EL ICONO*/
+.myIcono{
+  color:aliceblue;
+  font-size: 1.5em;
+  padding: 10px;
+  display: none;
+}
+/*ESTILO AL BLOQUE DE CONTENIDO*/
+#content{
+  max-width: 1180px;
+  position: relative;
+  top: 80px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2%;
+}
+/*ESTILO AL HEADER*/
+#content>header{
+  /* border:1px solid black; */
+  height: 120px;
+  padding: 10px 20px;
+  background-color: #ddd;
+  border-radius: 1em;
+}
+/*ESTILO A SECCIONES DE CONTENIDO*/
+#principal{
+  /* border: 1px solid black; */
+  width: 40%;
+  float:left;
+  padding: 5px;
+}
+#secundario{
+  /* border: 1px solid #000; */
+  width: 40%;
+  float: left;
+  padding: 5px;
+}
+#content>aside{
+  /* border: 1px solid; */
+  width: 20%;
+  float: left;
+  padding: 5px;
+}
+/*ESTILO DEL FOOTER*/
+#content>footer{
+  /* border: 1px solid; */
+  clear: both; /*Interesanteee!! ubico el footer abajo*/
+  background-color: #ddd;
+  /* border-radius: 1em; */
+  width: 100%;
+  height: 100px;
+  padding: 25px;
+}
+/*AGREGANDO MEDIA QUERIES*/
+@media screen and (max-width:820px){
+  #content{
+    padding: 0;
+    max-width: 100%;
+  }
+  #content>header{
+    padding: 0;
+    border-radius: 0;
+  }
+  #principal{
+    padding: 3%;
+    width: 45%;
+  }
+  #secundario{
+    float: right;
+    padding: 3%;
+    width: 45%;
+  }
+  #content>aside{
+    padding: 5%;
+    width: 95%;
+    clear: both;
+  }
+  #content>footer{
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width:600px){
+  #content{
+    /* padding: 0; */
+    width: auto;
+  }
+
+  #principal{
+    /* padding: 3%; */
+    width: auto;
+    float: none;
+    margin: 0;
+  }
+  #secundario{
+    width: auto;
+    float: none;
+    margin: 0;
+  }
+  #content>aside{
+    padding: 0;
+    width: auto;
+    /* clear: both; */
+  }
+  #content>footer{
+    width: auto;
+    /* padding: 0; */
+  }
+  /*creando clase para nuetro NAVBAR*/
+  .lista-sm{
+    display: none;
+  }
+  /*NAVAR RESPONSIVE*/
+
+  #navbar li{
+    float: none;
+    display: block;
+  }
+  #navbar li a{
+    padding: 5px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .myIcono{
+    display: block;
+    text-align: right;
+  }
+}
+/*FORMULARIO*/
+form{
+  max-width: 750px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+form>div{
+  padding: 15px;
+}
+input{
+  width: 90%;
+  display: block;
+  border: 0;
+  border-bottom: 1px solid orange;
+  color: #000;
+  /* position:relative; */
+  padding-left: 23px;
+  outline: none;
+}
+textarea{
+  width: 90%;
+  display: block;
+}
+.enviarContacto{
+  width: 90%;
+  height: 50px;
+  padding: 5px;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  border:1px solid transparent;
+  overflow: none;
+}
+.enviarContacto:hover{
+  background-color: grey;
+}
+#principal i{
+  /* border: 1px solid red; */
+  margin-right: 20px;
+  position: absolute;
+}
